@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Map2Code",
+    "description": "Generate a code from the map file",
+    "version": "1.0",
+    "icons": {
+        "48": "javascript.svg"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "./popup/popup.html",
+        "default_icon": "javascript.svg"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ]
+}
